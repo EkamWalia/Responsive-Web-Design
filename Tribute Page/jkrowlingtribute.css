@@ -1,0 +1,55 @@
+body{
+  background:url("https://s-media-cache-ak0.pinimg.com/originals/18/91/fe/1891fe6bf3fc5875ce6caa2a9361f91e.png")
+}
+p{
+ font-family: 'Cabin Sketch', cursive;
+  text-align: justify;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  letter-spacing:3px;
+  line-height: 1.5;
+}
+#main{
+  background-color: #262626;
+  color: white;
+  margin: 100px 80px 100px 80px;
+  padding: 10px 5px 5px 5px;
+}
+.page-title{
+  font-family: "Arial";
+  text-align: center;
+  font-family: lumos;
+  text-size: 20px;
+}
+.sub-title{
+  text-align: center;
+}
+.para-title{
+  text-align: center;
+}
+#img-div{
+  width: 80%;
+  margin:0 auto;
+  background-color: #262626;
+  color: white;
+  margin-bottom: 15px;
+  margin-top:25px;
+}
+#image
+{
+  display:block;
+  margin:0 auto;
+  max-width:600px;
+  max-height:400px;
+}
+#image-caption {
+  text-align: center;
+  padding-right: 10px;
+  padding-left:10px;
+}
+.name-tag{
+  background-color: #262626;
+  color: white;
+  margin: 50px 150px 50px 150px;
+  padding: 2px 2px 2px 2px;
+}

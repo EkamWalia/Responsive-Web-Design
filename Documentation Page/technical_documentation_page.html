@@ -1,0 +1,293 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="technical_documentation_page.css">
+    <title>C++ STL Tutorial</title>
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <nav id="navbar">
+      <header id="nav-header">Python 3.5 Documentation</header>
+      <ul>
+        <a class="nav-link" href="#Introduction"><li>Introduction</li></a>
+        <a class="nav-link" href="#Numbers_And_Strings"><li>Numbers And Strings</li></a>
+        <a class="nav-link" href="#Control_Flow_Statements"><li>Control Flow Statements</li></a>
+        <a class="nav-link" href="#Lists_And_Dictionaries"><li>Lists And Dictionaries</li></a>
+        <a class="nav-link" href="#Object_Oriented_Programming"><li>Object Oriented Programming</li></a>
+      </ul>
+    </nav>
+    <!-- Nav Bar Ends-->
+
+    <!-- Main Content -->
+    <main id="main-doc">
+      <header class="section-heading">Python 3.5 Documentation</header>
+      <!-- Introduction Section -->
+      <section id="Introduction" class="main-section">
+        <header class="section-heading">
+          Introduction
+        </header><br>
+        <p class="section-text">
+          Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python's elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.
+        </p>
+        <p class="section-text">
+          The Python interpreter and the extensive standard library are freely available in source or binary form for all major platforms from the Python Web site, https://www.python.org/, and may be freely distributed. The same site also contains distributions of and pointers to many free third party Python modules, programs and tools, and additional documentation.
+        </p>
+        <p class="section-text">
+          The Python interpreter is easily extended with new functions and data types implemented in C or C++ (or other languages callable from C). Python is also suitable as an extension language for customizable applications.
+
+          <br>
+          Some Advantages of using python are:
+          <ul>
+            <li>Presence of Third Party Modules</li>
+            <li>Open Source and Community Development</li>
+            <li>Learning Ease and Support Available</li>
+            <li>User-friendly Data Structures</li>
+            <li>Productivity and Speed</li>
+          </ul>
+        </p>
+      </section>
+      <br>
+      <!-- Numbers and Strings -->
+      <section  id="Numbers_And_Strings" class="main-section">
+        <header class="section-heading">Numbers And Strings</header><br>
+        <p class="section-subheading">Numbers</p>
+        <p class="section-text">
+          The interpreter acts as a simple calculator: you can type an expression at it and it will write the value. Expression syntax is straightforward: the operators +, -, * and / work just like in most other languages (for example, Pascal or C); parentheses (()) can be used for grouping.The integer numbers (e.g. 2, 4, 20) have type int, the ones with a fractional part (e.g. 5.0, 1.6) have type float. We will see more about numeric types later in the tutorial.
+          With Python, it is possible to use the ** operator to calculate powers.
+          Division (/) always returns a float. To do floor division and get an integer result (discarding any fractional result) you can use the // operator; to calculate the remainder you can use %:
+        </p>
+        <code><pre>
+>>> 2 + 2
+4
+>>> 50 - 5*6
+20
+>>> (50 - 5*6) / 4
+5.0
+>>> 8 / 5  # division always returns a floating point number
+1.6
+        </pre></code>
+        <p class="section-text">
+          The equal sign (=) is used to assign a value to a variable. Afterwards, no result is displayed before the next interactive prompt.If a variable is not "defined" (assigned a value), trying to use it will give you an error.There is full support for floating point; operators with mixed type operands convert the integer operand to floating point.
+        </p>
+        <code><pre>
+>>> width = 20
+>>> height = 5 * 9
+>>> width * height
+900
+>>> 5 ** 2  # 5 squared
+25
+>>> 2 ** 7  # 2 to the power of 7
+128
+        </pre></code>
+        <p class="section-text">
+          In interactive mode, the last printed expression is assigned to the variable _. This means that when you are using Python as a desk calculator, it is somewhat easier to continue calculations.
+        </p>
+        <p class="section-subheading">Strings</p>
+        <p class="section-text">
+          Besides numbers, Python can also manipulate strings, which can be expressed in several ways. They can be enclosed in single quotes ('...') or double quotes ("...") with the same result. \ can be used to escape quotes.In the interactive interpreter, the output string is enclosed in quotes and special characters are escaped with backslashes. While this might sometimes look different from the input (the enclosing quotes could change), the two strings are equivalent. The string is enclosed in double quotes if the string contains a single quote and no double quotes, otherwise it is enclosed in single quotes. The print() function produces a more readable output, by omitting the enclosing quotes and by printing escaped and special characters.
+        </p>
+        <code><pre>
+>>> 'spam eggs'  # single quotes
+'spam eggs'
+>>> 'doesn\'t'  # use \' to escape the single quote...
+"doesn't"
+>>> "doesn't"  # ...or use double quotes instead
+"doesn't"
+>>> '"Yes," he said.'
+'"Yes," he said.'
+>>> "\"Yes,\" he said."
+'"Yes," he said.'
+>>> '"Isn\'t," she said.'
+'"Isn\'t," she said.'
+        </pre></code>
+        <p class="section-text">
+          Strings can be concatenated (glued together) with the + operator, and repeated with *.Two or more string literals (i.e. the ones enclosed between quotes) next to each other are automatically concatenated.This only works with two literals though, not with variables or expressions.If you want to concatenate variables or a variable and a literal, use +.This feature is particularly useful when you want to break long strings.
+        </p>
+        <code><pre>
+>>>'"Isn\'t," she said.'
+>>> print('"Isn\'t," she said.')
+"Isn't," she said.
+>>> s = 'First line.\nSecond line.'  # \n means newline
+>>> s  # without print(), \n is included in the output
+'First line.\nSecond line.'
+>>> print(s)  # with print(), \n produces a new line
+First line.
+Second line.
+        </pre></code>
+        <p class="section-text">
+          String literals can span multiple lines. One way is using triple-quotes: """...""" or '''...'''. End of lines are automatically included in the string, but it's possible to prevent this by adding a \ at the end of the line.If you don't want characters prefaced by \ to be interpreted as special characters, you can use raw strings by adding an r before the first quote.
+        </p>
+      </section>
+      <br>
+
+      <!--Control Flow Statements -->
+      <section id="Control_Flow_Statements" class="main-section">
+        <header class="section-heading">
+          Control Flow Statements
+        </header>
+        <p class="section-subheading">If statements</p>
+        <p class="section-text">
+          Perhaps the most well-known statement type is the if statement.There can be zero or more elif parts, and the else part is optional. The keyword 'elif' is short for 'else if', and is useful to avoid excessive indentation. An if ... elif ... elif ... sequence is a substitute for the switch or case statements found in other languages.
+        </p>
+        <code><pre>
+>>> x = int(input("Please enter an integer: "))
+Please enter an integer: 42
+>>> if x < 0:
+...     x = 0
+...     print('Negative changed to zero')
+... elif x == 0:
+...     print('Zero')
+... elif x == 1:
+...     print('Single')
+... else:
+...     print('More')
+...
+More
+        </pre></code>
+        <p class="section-subheading">Loop Statements</p>
+        <p class="section-text">
+          The for statement in Python differs a bit from what you may be used to in C or Pascal. Rather than always iterating over an arithmetic progression of numbers (like in Pascal), or giving the user the ability to define both the iteration step and halting condition (as C), Python's for statement iterates over the items of any sequence (a list or a string), in the order that they appear in the sequence.
+        </p>
+        <code><pre>
+>>> # Measure some strings:
+... words = ['cat', 'window', 'defenestrate']
+>>> for w in words:
+...     print(w, len(w))
+...
+cat 3
+window 6
+defenestrate 12
+        </pre></code>
+        <p class="section-subheading">Break and Continue Clause</p>
+        <p class="section-text">
+          The break statement, like in C, breaks out of the innermost enclosing for or while loop.Loop statements may have an else clause; it is executed when the loop terminates through exhaustion of the list (with for) or when the condition becomes false (with while), but not when the loop is terminated by a break statement. This is exemplified by the following loop, which searches for prime numbers.
+        </p>
+      </section>
+      <br>
+
+      <!-- Lists And Dictionaries -->
+      <section  id="Lists_And_Dictionaries" class="main-section">
+        <header class="section-heading">Lists And Dictionaries</header>
+        <p class="section-subheading">Lists</p>
+        <p class="section-text">
+          Python knows a number of compound data types, used to group together other values. The most versatile is the list, which can be written as a list of comma-separated values (items) between square brackets. Lists might contain items of different types, but usually the items all have the same type.Like strings (and all other built-in sequence type), lists can be indexed and sliced.ll slice operations return a new list containing the requested elements. This means that the following slice returns a new (shallow) copy of the list
+        </p>
+        <code><pre>
+>>> squares = [1, 4, 9, 16, 25]
+>>> squares
+[1, 4, 9, 16, 25]
+>>> squares[0]  # indexing returns the item
+1
+>>> squares[-1]
+25
+>>> squares[-3:]  # slicing returns a new list
+[9, 16, 25]
+        </pre></code>
+          Lists also support operations like concatenation.Unlike strings, which are immutable, lists are a mutable type, i.e. it is possible to change their content.You can also add new items at the end of the list, by using the append() method.
+          <p class="section-text">
+        </p>
+        <code><pre>
+>>> fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
+>>> fruits.count('apple')
+2
+>>> fruits.count('tangerine')
+0
+>>> fruits.index('banana')
+3
+>>> fruits.index('banana', 4)  # Find next banana starting a position 4
+6
+>>> fruits.reverse()
+>>> fruits
+['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange']
+>>> fruits.append('grape')
+>>> fruits
+['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange', 'grape']
+>>> fruits.sort()
+>>> fruits
+['apple', 'apple', 'banana', 'banana', 'grape', 'kiwi', 'orange', 'pear']
+>>> fruits.pop()
+'pear'
+        </pre></code>
+        <p class="section-text">
+          You might have noticed that methods like insert, remove or sort that only modify the list have no return value printed – they return the default None. [1] This is a design principle for all mutable data structures in Python.
+        </p>
+        <p class="section-subheading">Dictionaries</p>
+        <p class="section-text">
+          Another useful data type built into Python is the dictionary (see Mapping Types - dict). Dictionaries are sometimes found in other languages as “associative memories" or “associative arrays". Unlike sequences, which are indexed by a range of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable object either directly or indirectly, it cannot be used as a key. You can't use lists as keys, since lists can be modified in place using index assignments, slice assignments, or methods like append() and extend().
+        </p>
+        <code><pre>
+>>> tel = {'jack': 4098, 'sape': 4139}
+>>> tel['guido'] = 4127
+>>> tel
+{'sape': 4139, 'guido': 4127, 'jack': 4098}
+>>> tel['jack']
+4098
+>>> del tel['sape']
+>>> tel['irv'] = 4127
+>>> tel
+{'guido': 4127, 'irv': 4127, 'jack': 4098}
+>>> list(tel.keys())
+['irv', 'guido', 'jack']
+>>> sorted(tel.keys())
+['guido', 'irv', 'jack']
+>>> 'guido' in tel
+True
+>>> 'jack' not in tel
+False
+        </pre></code>
+        <p class="section-text">
+          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated with that key is forgotten. It is an error to extract a value using a non-existent key.Performing list(d.keys()) on a dictionary returns a list of all the keys used in the dictionary, in arbitrary order (if you want it sorted, just use sorted(d.keys()) instead).To check whether a single key is in the dictionary, use the in keyword.
+        </p>
+        <code><pre>
+>>> knights = {'gallahad': 'the pure', 'robin': 'the brave'}
+>>> for k, v in knights.items():
+...     print(k, v)
+...
+gallahad the pure
+robin the brave
+        </pre></code>
+
+          <p class="section-text">
+          When looping through dictionaries, the key and corresponding value can be retrieved at the same time using the items() method.When looping through a sequence, the position index and corresponding value can be retrieved at the same time using the enumerate() function.To loop over two or more sequences at the same time, the entries can be paired with the zip() function.
+        </p>
+      </section>
+<br>
+      <!-- Object Oriented Programming -->
+      <section id="Object_Oriented_Programming" class="main-section">
+        <header class="section-heading">Object Oriented Programming</header>
+        <p class="section-text">
+          Classes introduce a little bit of new syntax, three new object types, and some new semantics.The simplest form of class definition looks like this:
+        </p>
+        <code><pre>
+class MyClass:
+    """A simple example class"""
+    i = 12345
+
+    def f(self):
+        return 'hello world'
+      </pre></code>
+        <p class="section-text">
+          Class definitions, like function definitions (def statements) must be executed before they have any effect. (You could conceivably place a class definition in a branch of an if statement, or inside a function.)When a class definition is entered, a new namespace is created, and used as the local scope - thus, all assignments to local variables go into this new namespace. In particular, function definitions bind the name of the new function here.When a class definition is left normally (via the end), a class object is created. This is basically a wrapper around the contents of the namespace created by the class definition; we'll learn more about class objects in the next section. The original local scope (the one in effect just before the class definition was entered) is reinstated, and the class object is bound here to the class name given in the class definition header (ClassName in the example).
+        </p>
+        <code><pre>
+>>> class Complex:
+...     def __init__(self, realpart, imagpart):
+...         self.r = realpart
+...         self.i = imagpart
+...
+>>> x = Complex(3.0, -4.5)
+>>> x.r, x.i
+(3.0, -4.5)
+        </pre></code>
+        <p class="section-text">
+          Class objects support two kinds of operations: attribute references and instantiation.
+
+Attribute references use the standard syntax used for all attribute references in Python: obj.name. Valid attribute names are all the names that were in the class's namespace when the class object was created. So, if the class definition looked like this.Class instantiation uses function notation. Just pretend that the class object is a parameterless function that returns a new instance of the class.The instantiation operation (“calling" a class object) creates an empty object. Many classes like to create objects with instances customized to a specific initial state. Therefore a class may define a special method named __init__().
+        </p>
+      </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer></footer>
+  </body>
+</html>
